@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "e9f923cb-0b20-4c1a-9fa4-c45c5ce48b77",
+		"name": "Veterinaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956977"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "dylan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:2636/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Dylan",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Julian",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "dylan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dylan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123Aa!",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Owner/OneDrive/Imágenes/advneture.jpg"
+								},
+								{
+									"key": "phone",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Uno",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/user/67a6dfdd1126b3742b570d60",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"67a6dfdd1126b3742b570d60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dylan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/user/679cf889f6762f3420bc83b3",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"679cf889f6762f3420bc83b3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "getAnimal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2636/animal/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"animal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alfonso",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tall and brown hair",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "3 years old",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dog",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "Dylan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/animal/add",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"animal",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Animal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "black",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/animal/679cfb4159f7d122f61507d0",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"animal",
+								"679cfb4159f7d122f61507d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Animal",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/animal/679cfb4159f7d122f61507d0",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"animal",
+								"679cfb4159f7d122f61507d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Animal",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2ZGZkZDExMjZiMzc0MmI1NzBkNjAiLCJ1c2VybmFtZSI6ImR5bGFuIiwibmFtZSI6IkR5bGFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk5MjY1NywiZXhwIjoxNzM5MDAzNDU3fQ.q-ISWmwHN9ixylb52GZoiFnjZMq8XnmEAkKWVboV4qg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/animal/67a6ef3379246aab3537f98c",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"animal",
+								"67a6ef3379246aab3537f98c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
